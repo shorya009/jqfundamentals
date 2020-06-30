@@ -12,8 +12,6 @@ $('#myList li:eq(2)');
 $('#myList #myListItem');
 // this one is redundant
 
-
-
 Q3// Select the label for the search input using an attribute selector.
 $('label[for="q"]');
 
