@@ -64,3 +64,41 @@ $('#slideshow li:first')
 
 
 
+--------------------------MANIPULATING-------------------------
+
+//Q1 Add five new list items to the end of the unordered list #myList.
+
+let element = $('#mylist')
+let itemNumber = 8
+let i = 0
+const elementsToAdd = 5
+
+while(i < elementsToAdd){
+  $(`<li>List item ${itemNumber}</li>`).appendTo('#myList')
+++itemNumber
+++i
+
+}
+
+//Q2 Remove the odd list items
+
+$('#myList li:odd').remove();
+
+//Q3 Add another h2 and another paragraph to the last div.module
+
+$('div.module')
+	.append('<h2>new heading</h2>')
+	.append('<p>new paragraph</p>');
+
+//Q4 Add another option to the select element; give the option the value "Wednesday"
+
+$('select').append('<option value="wednesday">Wednesday</option>');
+
+
+//Q5 Add a new div.module to the page after the last one; put a copy of one of the existing images inside of it.
+
+let $img = $('img:first');
+let $newDiv = $('<div class="module"/>');
+$newDiv.appendTo('div.module:last').append($img);
+
+
