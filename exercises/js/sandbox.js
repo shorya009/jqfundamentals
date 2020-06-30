@@ -1,3 +1,6 @@
+-------------SELECTING-----------------
+
+
 Q1 // Select all of the div elements that have a class of "module".
 $('div.module');
 
@@ -27,3 +30,37 @@ $('#fruits tbody tr:odd');
 
 $('tbody tr:odd');
 //general way
+
+
+
+-----------------TRAVERSING----------------
+
+//Q1 Select all of the image elements on the page; log each image's alt attribute.
+
+$('img').each(function(index,element) {
+	var $img = $(element);
+	console.log($img.attr('alt'));
+});
+
+//Q2 Select the search input text box, then traverse up to the form and add a class to the form.
+$('input[name="q"]').closest('form').addClass('foo');
+
+//Q3 Select the list item inside #myList that has a class of "current" and remove that class from it; add a class of "current" to the next list item.
+$('li.current').removeClass('current').next().addClass('current');
+
+// Q4 Select the select element inside #specials; traverse your way to the submit button.
+$('#specials select').parent().next().find('input.input_submit');
+
+or
+
+$('#specials select').parent().next().find('input[type="submit"]');
+
+//Q5 Select the first list item in the #slideshow element; add the class "current" to it, and then add a class of "disabled" to its sibling elements.
+
+$('#slideshow li:first')
+	.addClass('current')
+	.siblings()
+		.addClass('disabled');
+
+
+
