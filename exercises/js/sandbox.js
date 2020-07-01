@@ -37,7 +37,7 @@ $('tbody tr:odd');
 
 //Q1 Select all of the image elements on the page; log each image's alt attribute.
 
-$('img').each(function(index,element) {
+$('img').each((index,element)=> {
 	var $img = $(element);
 	console.log($img.attr('alt'));
 });
@@ -46,9 +46,10 @@ $('img').each(function(index,element) {
 $('input[name="q"]').closest('form').addClass('foo');
 
 //Q3 Select the list item inside #myList that has a class of "current" and remove that class from it; add a class of "current" to the next list item.
-$('li.current').removeClass('current').next().addClass('current');
+$('#myList li.current').removeClass('current').next().addClass('current')
 
 // Q4 Select the select element inside #specials; traverse your way to the submit button.
+
 $('#specials select').parent().next().find('input.input_submit');
 
 or
