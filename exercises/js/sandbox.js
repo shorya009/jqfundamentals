@@ -50,11 +50,7 @@ $('#myList li.current').removeClass('current').next().addClass('current')
 
 // Q4 Select the select element inside #specials; traverse your way to the submit button.
 
-$('#specials select').parent().next().find('input.input_submit');
-
-or
-
-$('#specials select').parent().next().find('input[type="submit"]');
+$('#specials select').closest('form').find('input[type="submit"]')
 
 //Q5 Select the first list item in the #slideshow element; add the class "current" to it, and then add a class of "disabled" to its sibling elements.
 
