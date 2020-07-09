@@ -4,13 +4,11 @@ $(function() {
   hoverClass = 'hover';
 
   $nav
-    .mouseover(function() { //hover
-      $(this).addClass(hoverClass).find(unorderedList).show();
-    })
-    .mouseout(function(){ //out
-      $(this).removeClass(hoverClass).find(unorderedList).hide();
-    }
-  );
+    .hover(function() {
+			$(this).addClass(hoverClass).find(unorderedList).show();
+		}, function() {
+			$(this).removeClass(hoverClass).find(unorderedList).hide();
+		});
 });
 
 
