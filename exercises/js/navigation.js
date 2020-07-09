@@ -1,17 +1,18 @@
 $(function() {
   const $nav = $('#nav li'),
-  unorderedList = 'ul',
-  hoverClass = 'hover';
+    unorderedList = 'ul',
+    hoverClass = 'hover';
 
   $nav
     .hover(function() {
-			$(this).addClass(hoverClass).find(unorderedList).show();
-		}, function() {
-			$(this).removeClass(hoverClass).find(unorderedList).hide();
-		});
+      $(this).addClass(hoverClass).find(unorderedList).show();
+    }, function() {
+      $(this).removeClass(hoverClass).find(unorderedList).hide();
+    });
 });
 
 
+		
 
 //Q1 Is there another method to specify $(document).ready?
 ans yes there are several ways one the way is $(function() {}
