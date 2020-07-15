@@ -1,9 +1,14 @@
 class SlideShow {
 
-  constructor(slides, slideCount, totalSlides) {
+  constructor(slides) {
     this.slides = slides;
-    this.slideCount = slideCount;
-    this.totalSlides = totalSlides;
+    this.slideCount = 0;
+    this.totalSlides = this.slides.length;
+  }
+  navigationArea(){
+    $(`<div><span id = "current-image">1</span>
+      / <span id = "total-images">${this.totalSlides}</span>
+      </div>`).insertAfter('#slideshow');
   }
 
   slideShowCounter() {
@@ -21,16 +26,12 @@ class SlideShow {
   init() {
     this.slides.hide();
     this.startSlideShow();
-    $(`<div><span id = "current-image">1</span>
-      / <span id = "total-images">${this.totalSlides}</span>
-      </div>`).insertAfter('#slideshow');
+    this.navigationArea()
   }
 }
 
-$(function() {
+$(() => {
   let slides = $('#slideshow li'),
-  slideCount = 0,
-  totalSlides = slides.length;
-  slideShow = new SlideShow(slides, slideCount, totalSlides);
+    slideShow = new SlideShow(slides);
   slideShow.init();
 });
